@@ -1,12 +1,14 @@
 package br.com.mvteus.todolist;
 
+import lombok.Data;
+
+@Data
 public class UserModel {
     private String name;
     private String username;
-
     private String password;
 
-    public String getName() {
+    /*public String getName() {
         return name;
     }
 
@@ -28,5 +30,5 @@ public class UserModel {
 
     public void setPassword(String password) {
         this.password = password;
-    }
+    }*/
 }
