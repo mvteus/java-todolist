@@ -1,4 +1,4 @@
-package br.com.mvteus.todolist;
+package br.com.mvteus.todolist.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Data
-@Entity(name = "tb_users")
+@Entity(name = "tb_users") /* Cria a tabela com o nome que eu especificar aqui */
 public class UserModel {
 
     @Id /* Para definir que este este atributo 'id' seja a chave primária da entidade no banco de dados */

@@ -1,4 +1,4 @@
-package br.com.mvteus.todolist;
+package br.com.mvteus.todolist.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
