@@ -15,18 +15,19 @@ import java.util.UUID;
 public class TaskModel {
 
     /*
-    * ID
-    * Usuário (ID do Usuário)
-    * Descrição
-    * Título
-    * Data de Início
-    * Data de Término
-    * Prioridade
-    * */
+     * ID
+     * Usuário (ID do Usuário)
+     * Descrição
+     * Título
+     * Data de Início
+     * Data de Término
+     * Prioridade
+     * */
 
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
+    private UUID idUser;
     private String description;
 
     @Column(length = 50)
@@ -36,5 +37,11 @@ public class TaskModel {
     private String priority;
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    public void setTitle(String title) throws Exception {
+        if (title.length() > 50) {
+            throw new Exception("O campo TÍTULO deve conter no máximo 50 caracteres.");
+        }
+    }
 
 }
